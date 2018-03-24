@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>sm- Url Shortener Microservice</title>
+    <meta name="description" content="Simple API made with Glitch!">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <small>SM</small>, a url shortening microservice 
+        </h1>
+      </header>
+      <section>
+        <p>
+          Simply submit an url to <a href="#">sm.glitch.me/new</a> to recieve a shortcode to that site's domain.
+        </p>
+        <p>
+          To use a shortcode, append it to the end of <a href="#">sm.glitch.me/</a> to be redirected.
+        </p>
+        <p>         
+          Sites need to follow a format of http://www.example.com. Any information pass the top level domain will be discarded.
+          Additionally, for the purposes of <a href="https://www.freecodecamp.org/challenges/url-shortener-microservice">this assignment</a>,
+          websites without subdomains (ex: https://c9.io) will not work.
+        </p>
+        <div class="sample">
+          <p>
+            <code>
+              sm.glitch.me/new?site=https://www.google.com/ ==&rsaquo; <i>returns aaaaab</i>
+            </code>
+            <code>
+              sm.glitch.me/aaaaab ==&rsaquo; <i>redirects to https://www.google.com/</i>
+            </code>
+          </p>
+        </div>
+        <form method="GET" action="/new">
+          <p class="attention">
+            Try it out!
+          </p>
+          <input name="site" type="text" maxlength="100" placeholder="http://www.example.com" aria-labelledby="submit">
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
