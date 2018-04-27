@@ -13,8 +13,5 @@ More information about the challenge can be found [at FreeCodeCamp](https://www.
 In addition to the above user stories:
 1. "A profanity filter is used to *minimize* the chance of an offensive shortCode being returned"
 
-###### Possible improvements
-1. Randomize which shortCodes are returned in order to avoid predictability
-
 --------------------------
 Made by [Gustavo Guarino](https://www.gustavoguarino.com)
